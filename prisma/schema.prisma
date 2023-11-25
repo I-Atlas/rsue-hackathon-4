@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // provider = "sqlite"
+  // url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Company {
+  id        Int        @id @default(autoincrement())
+  name      String
+  employees Employee[]
+}
+
+model Employee {
+  id                  Int                   @id @default(autoincrement())
+  companyId           Int
+  company             Company               @relation(fields: [companyId], references: [id])
+  messages            Message[]
+  commits             Commit[]
+  tasks               Task[]
+  applicationActivity ApplicationActivity[]
+}
+
+model Message {
+  id         Int      @id @default(autoincrement())
+  metadata   Json
+  employeeId Int
+  employee   Employee @relation(fields: [employeeId], references: [id])
+}
+
+model Commit {
+  id         Int      @id @default(autoincrement())
+  metadata   Json
+  employeeId Int
+  employee   Employee @relation(fields: [employeeId], references: [id])
+}
+
+model Task {
+  id         Int      @id @default(autoincrement())
+  metadata   Json
+  employeeId Int
+  employee   Employee @relation(fields: [employeeId], references: [id])
+}
+
+model ApplicationActivity {
+  id         Int      @id @default(autoincrement())
+  metadata   Json
+  employeeId Int
+  employee   Employee @relation(fields: [employeeId], references: [id])
+}
