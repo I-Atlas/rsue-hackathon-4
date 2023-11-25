@@ -1,14 +1,15 @@
 import { Logger, Module } from '@nestjs/common';
-import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PrismaModule, loggingMiddleware } from 'nestjs-prisma';
 import { ScheduleModule } from '@nestjs/schedule';
 import { HealthModule } from './health/health.module';
 import { ConfigModule } from '@nestjs/config';
+import { BurnoutModule } from './burnout/burnout.module';
 
 @Module({
   imports: [
     HealthModule,
+    BurnoutModule,
     ScheduleModule.forRoot(),
     ConfigModule.forRoot({ isGlobal: true }),
     PrismaModule.forRoot({
@@ -23,7 +24,6 @@ import { ConfigModule } from '@nestjs/config';
       },
     }),
   ],
-  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
