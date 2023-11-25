@@ -21,6 +21,8 @@ model Company {
 
 model Employee {
   id                  Int                   @id @default(autoincrement())
+  name                String
+  sex                 String
   companyId           Int
   company             Company               @relation(fields: [companyId], references: [id])
   messages            Message[]

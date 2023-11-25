@@ -9,6 +9,8 @@ CREATE TABLE "Company" (
 -- CreateTable
 CREATE TABLE "Employee" (
     "id" SERIAL NOT NULL,
+    "name" TEXT NOT NULL,
+    "sex" TEXT NOT NULL,
     "companyId" INTEGER NOT NULL,
 
     CONSTRAINT "Employee_pkey" PRIMARY KEY ("id")
@@ -44,7 +46,7 @@ CREATE TABLE "Task" (
 -- CreateTable
 CREATE TABLE "ApplicationActivity" (
     "id" SERIAL NOT NULL,
-    "time" TIMESTAMP(3) NOT NULL,
+    "metadata" JSONB NOT NULL,
     "employeeId" INTEGER NOT NULL,
 
     CONSTRAINT "ApplicationActivity_pkey" PRIMARY KEY ("id")
