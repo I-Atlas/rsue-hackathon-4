@@ -1,4 +1,4 @@
-# 🔥 Burnout
+# 🔥 Burnout Backend
 
 ## Проблема
 
