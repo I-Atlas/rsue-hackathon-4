@@ -12,6 +12,10 @@
 - По набору критериев определяется, что сотрудник склонен к выгоранию.
 - Посредством HTTP-запроса информация передается на фронтенд (Yandex Data Lens / Web) и формируется диаграмма.
 
+## Swagger
+
+https://probable-enigma-production.up.railway.app/docs/api
+
 ## Архитектура
 
 <img src="https://i.imgur.com/HWR1ucb.jpg" alt="Arch" />
