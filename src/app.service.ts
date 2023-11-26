@@ -14,13 +14,11 @@ export class AppService {
     try {
       this.logger.debug('Started adding activity to employees');
 
-      const startDate = subDays(new Date(), 1);
-      const endDate = new Date();
+      const date = subDays(new Date(), 1);
       const employees = await this.prisma.employee.findMany();
       for (const employee of employees) {
         generageFakeActivity({
-          startDate,
-          endDate,
+          date,
           employee,
           prisma: this.prisma,
         });

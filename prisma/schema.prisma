@@ -23,6 +23,8 @@ model Employee {
   id                  Int                   @id @default(autoincrement())
   name                String
   sex                 String
+  age                 Int
+  experience          Int
   companyId           Int
   company             Company               @relation(fields: [companyId], references: [id])
   messages            Message[]
@@ -33,28 +35,34 @@ model Employee {
 
 model Message {
   id         Int      @id @default(autoincrement())
-  metadata   Json
+  length     Int
+  angry      Boolean
+  time       DateTime
   employeeId Int
   employee   Employee @relation(fields: [employeeId], references: [id])
 }
 
 model Commit {
   id         Int      @id @default(autoincrement())
-  metadata   Json
+  message    String
+  sha        String
+  time       DateTime
   employeeId Int
   employee   Employee @relation(fields: [employeeId], references: [id])
 }
 
 model Task {
   id         Int      @id @default(autoincrement())
-  metadata   Json
+  time       DateTime
+  status     String
   employeeId Int
   employee   Employee @relation(fields: [employeeId], references: [id])
 }
 
 model ApplicationActivity {
   id         Int      @id @default(autoincrement())
-  metadata   Json
+  time       DateTime
+  hours      Int
   employeeId Int
   employee   Employee @relation(fields: [employeeId], references: [id])
 }
