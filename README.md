@@ -1,4 +1,4 @@
-# 🔥 Burnout Backend
+# [Хакатон RinHaсk](https://rsue.ru/universitet/novosti/novosti.php?ELEMENT_ID=109316)
 
 ## Проблема
 
