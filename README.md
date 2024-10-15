@@ -1,39 +1,37 @@
-# [Хакатон RinHaсk](https://rsue.ru/universitet/novosti/novosti.php?ELEMENT_ID=109316)
+# [Hackathon RinHaсk](https://rsue.ru/universitet/novosti/novosti.php?ELEMENT_ID=109316)
 
-## Проблема
+## 🏅 The HelloWorld team took third place
 
-В современной IT-индустрии проблема выгорания сотрудников становится одной из наиболее актуальных. Выявить выгорание у себя самостоятельно сложно, поскольку осознание необходимости отдыха приходит слишком поздно. Это состояние несет серьезные риски для здоровья. Сотрудник, переживший выгорание, обычно теряет не только производительность, но и может стать катализатором токсичного поведения в коллективе. В связи с этим необходимо задуматься о способах выявления этого состояния и принятии мер предотвращения.
+![hackathon](/details/cert_rinhack.jpg)
 
-## Описание
+## 📜 Description
 
-Реализована система, которая будет доступна менеджерам компании, предполагается, что доступ будет выдаваться на сетевом уровне. Как работает система:
+In the modern IT industry, the problem of employee burnout is becoming one of the most urgent. It is difficult to identify burnout on your own, because the awareness of the need for rest comes too late. This condition carries serious health risks. An employee who has experienced burnout usually loses not only productivity, but can also become a catalyst for toxic behavior in the team. In this regard, it is necessary to think about ways to identify this condition and take preventive measures.
 
-- Ежедневно в 00:00 добавляются новые данные об активности сотрудников за предыдущий день.
-- По набору критериев определяется, что сотрудник склонен к выгоранию.
-- Посредством HTTP-запроса информация передается на фронтенд (Yandex Data Lens / Web) и формируется диаграмма.
+A system has been implemented that will be available to the company's managers, it is assumed that access will be granted at the network level. How the system works:
+
+- New data on employee activity for the previous day is added daily at 00:00.
+- A set of criteria determines that an employee is prone to burnout.
+- Through an HTTP request, information is transmitted to the frontend (Yandex Data Lens / Web) and a diagram is formed.
 
 ## Swagger
 
 https://probable-enigma-production.up.railway.app/docs/api
 
-## Архитектура
+## Architecture
 
 <img src="https://i.imgur.com/HWR1ucb.jpg" alt="Arch" />
 
-## База данных
+## Database
 
 <img src="https://i.imgur.com/jp6k267.png" alt="DB" />
 <img src="https://i.imgur.com/Kt3l9h0.png" alt="DB" />
 
-## Установка
+## Install and start
 
 ```bash
 $ yarn install
-```
 
-## Запуск приложения
-
-```bash
 # development
 $ yarn run start
 
@@ -43,3 +41,5 @@ $ yarn run start:dev
 # production mode
 $ yarn run start:prod
 ```
+
+![hackathon](/details/rinhack.jpg)
