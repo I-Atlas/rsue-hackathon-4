@@ -2,7 +2,13 @@
 
 ## 🏅 The HelloWorld team took third place
 
+> [!NOTE]  
+> Case description here: `/details/case.pdf`
+
 ![hackathon](/details/cert_rinhack.jpg)
+
+> [!IMPORTANT]  
+> This is backend repo. Unfortunately, the frontend repository has been deleted.
 
 ## 📜 Description
 
