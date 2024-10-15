@@ -1,6 +1,6 @@
 # [RinHaсk 2023 Hackathon](https://rsue.ru/universitet/novosti/novosti.php?ELEMENT_ID=109316)
 
-## 🏅 The HelloWorld team took third place
+## 🏅 The HelloWorld team took third (3) place
 
 > [!NOTE]  
 > Case description here: `/details/case.pdf`
